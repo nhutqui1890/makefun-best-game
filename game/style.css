@@ -1,0 +1,30 @@
+/* Emberlight's page: the canvas fills the window at its own 16:9 aspect, centred
+   on the dark backdrop, with a custom crosshair drawn in the game itself. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #070a12;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game {
+  display: block;
+  width: min(100vw, 177.78vh);
+  height: min(100vh, 56.25vw);
+  touch-action: none;
+  cursor: none;
+  background: #0d1220;
+}
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
